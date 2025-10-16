@@ -1,0 +1,1816 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحه لندینگ مدرن</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script>
+        module.exports = {
+            theme: {
+                extend: {
+                    animation: {
+                        'horizontal-move': 'horizontal-move 3s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        'horizontal-move': {
+                            '0%, 100%': { transform: 'translateX(0px)' },
+                            '50%': { transform: 'translateX(10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            scroll-behavior: smooth;
+        }
+    </style>
+
+</head>
+
+<body class="bg-white">
+    <!-- نوبار -->
+    <nav class="bg-gradient-to-r from-blue-600 to-blue-700 shadow-2xl sticky top-0 z-50">
+        <!-- بورد زیر نوبار -->
+        <div class="h-1 bg-gradient-to-r from-cyan-400 to-purple-400 shadow-lg"></div>
+
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+
+                <!-- لوگو و برند -->
+                <div class="flex items-center gap-4">
+                    <div
+                        class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center border border-white/30">
+                        <i class="fas fa-industry text-white text-xl"></i>
+                    </div>
+                    <div class="flex flex-col">
+                        <h1 class="text-xl font-bold text-white">شهرک صنعتی شمس آباد</h1>
+                        <span class="text-xs text-white/80">پیشرو در صنعت و فناوری</span>
+                    </div>
+                </div>
+
+                <!-- منوی وسط - دسکتاپ -->
+                <div class="hidden md:flex items-center gap-6 lg:gap-8 text-base lg:text-lg">
+                    <a href="/fa" class="text-white font-medium transition-colors duration-300 relative">
+                        خانه
+                        <div class="absolute -bottom-2 left-0 w-full h-0.5 bg-cyan-300"></div>
+                    </a>
+
+                    <div class="relative group">
+                        <a href="/fa/#units"
+                            class="text-white/90 hover:text-white transition duration-300 font-medium flex items-center">
+                            واحدهای صنعتی
+                            <i
+                                class="fas fa-chevron-down text-sm mr-1 transform group-hover:rotate-180 transition-transform duration-300"></i>
+                        </a>
+
+                        <!-- مگا منو -->
+                        <div
+                            class="absolute left-1/2 transform -translate-x-1/2 mt-2 w-96 lg:w-[800px] bg-white shadow-2xl rounded-2xl overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <div class="p-6">
+                                <h3 class="font-bold text-gray-800 text-lg mb-4 border-b pb-2">واحدهای صنعتی فعال</h3>
+
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <!-- واحد صنعتی ۱ -->
+                                    <div
+                                        class="bg-gray-50 rounded-xl p-4 hover:shadow-lg transition-all duration-300 border border-gray-200">
+                                        <div class="flex items-start mb-3">
+                                            <div
+                                                class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-3">
+                                                <i class="fas fa-factory text-blue-600"></i>
+                                            </div>
+                                            <div>
+                                                <h4 class="font-semibold text-blue-600 text-sm">کارخانه پلیمر شمس</h4>
+                                                <p class="text-xs text-gray-500 mt-1 line-clamp-2">
+                                                    تولید کننده انواع کامپاندهای پلیمری و مواد اولیه صنعتی با تکنولوژی
+                                                    روز...
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <a class="block w-full text-center px-4 py-2 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition duration-300 text-sm"
+                                            href="#">
+                                            مشاهده واحد
+                                        </a>
+                                    </div>
+
+                                    <!-- واحد صنعتی ۲ -->
+                                    <div
+                                        class="bg-gray-50 rounded-xl p-4 hover:shadow-lg transition-all duration-300 border border-gray-200">
+                                        <div class="flex items-start mb-3">
+                                            <div
+                                                class="flex-shrink-0 w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-3">
+                                                <i class="fas fa-industry text-green-600"></i>
+                                            </div>
+                                            <div>
+                                                <h4 class="font-semibold text-green-600 text-sm">پتروشیمی پیشرفته</h4>
+                                                <p class="text-xs text-gray-500 mt-1 line-clamp-2">
+                                                    تولید مواد شیمیایی و ترکیبات پتروشیمی با استانداردهای بین‌المللی...
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <a class="block w-full text-center px-4 py-2 bg-green-500 text-white font-semibold rounded-lg hover:bg-green-600 transition duration-300 text-sm"
+                                            href="#">
+                                            مشاهده واحد
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="mt-4 pt-4 border-t border-gray-200">
+                                    <a href="/fa/#units"
+                                        class="block text-center text-blue-600 hover:text-blue-700 font-medium text-sm">
+                                        مشاهده همه واحدها ←
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="/fa/#services"
+                        class="text-white/90 hover:text-white transition duration-300 font-medium relative group">
+                        خدمات
+                        <div
+                            class="absolute -bottom-2 left-0 w-0 h-0.5 bg-cyan-300 group-hover:w-full transition-all duration-300">
+                        </div>
+                    </a>
+
+                    <a href="/fa/#news"
+                        class="text-white/90 hover:text-white transition duration-300 font-medium relative group">
+                        اخبار
+                        <div
+                            class="absolute -bottom-2 left-0 w-0 h-0.5 bg-cyan-300 group-hover:w-full transition-all duration-300">
+                        </div>
+                    </a>
+
+                    <a href="/fa/about"
+                        class="text-white/90 hover:text-white transition duration-300 font-medium relative group">
+                        درباره ما
+                        <div
+                            class="absolute -bottom-2 left-0 w-0 h-0.5 bg-cyan-300 group-hover:w-full transition-all duration-300">
+                        </div>
+                    </a>
+
+                    <a href="/fa/contact"
+                        class="text-white/90 hover:text-white transition duration-300 font-medium relative group">
+                        تماس با ما
+                        <div
+                            class="absolute -bottom-2 left-0 w-0 h-0.5 bg-cyan-300 group-hover:w-full transition-all duration-300">
+                        </div>
+                    </a>
+                </div>
+
+                <!-- دکمه‌های سمت چپ - دسکتاپ -->
+                <div class="hidden md:flex items-center gap-4">
+                    <!-- دکمه جستجو -->
+                    <button
+                        class="w-10 h-10 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center border border-white/20 text-white transition-all duration-300 hover:scale-105">
+                        <i class="fas fa-search"></i>
+                    </button>
+
+                    <!-- دکمه ورود -->
+                    <button
+                        class="px-6 py-2 bg-cyan-400 hover:bg-cyan-500 text-white rounded-xl font-bold transition-all duration-300 hover:scale-105 shadow-lg">
+                        ورود
+                    </button>
+                </div>
+
+                <!-- منوی موبایل -->
+                <div class="flex md:hidden items-center gap-4">
+                    <!-- دکمه ورود موبایل -->
+                    <button
+                        class="px-4 py-2 bg-cyan-400 hover:bg-cyan-500 text-white rounded-lg font-bold transition-all duration-300 text-sm">
+                        ورود
+                    </button>
+
+                    <!-- دکمه منوی موبایل -->
+                    <button id="mobile-menu-button" class="text-white p-2 rounded-lg">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- منوی موبایل -->
+        <div id="mobile-menu" class="md:hidden bg-blue-700/95 backdrop-blur-lg border-t border-white/10 pb-4 hidden">
+            <div class="container mx-auto px-4">
+                <ul class="flex flex-col space-y-3 text-lg py-4">
+                    <li>
+                        <a href="/fa"
+                            class="text-white hover:text-cyan-300 transition duration-300 block py-2 font-medium border-b border-white/10">
+                            <i class="fas fa-home ml-2"></i>
+                            خانه
+                        </a>
+                    </li>
+
+                    <!-- واحدهای صنعتی با آکاردئون -->
+                    <li class="border-b border-white/10">
+                        <button id="units-accordion"
+                            class="w-full text-right py-2 text-white hover:text-cyan-300 transition duration-300 font-medium flex items-center justify-between">
+                            <div class="flex items-center">
+                                <i class="fas fa-factory ml-2"></i>
+                                واحدهای صنعتی
+                            </div>
+                            <i class="fas fa-chevron-down transition-transform duration-300" id="units-arrow"></i>
+                        </button>
+
+                        <!-- محتوای آکاردئون -->
+                        <div id="units-content" class="hidden pr-6 pb-2">
+                            <div class="space-y-2">
+                                <a href="#"
+                                    class="block text-white/90 hover:text-cyan-300 transition duration-300 text-sm py-1 pr-4 border-r-2 border-cyan-400">
+                                    کارخانه پلیمر شمس
+                                </a>
+                                <a href="#"
+                                    class="block text-white/90 hover:text-cyan-300 transition duration-300 text-sm py-1 pr-4 border-r-2 border-cyan-400">
+                                    پتروشیمی پیشرفته
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="/fa/#services"
+                            class="text-white hover:text-cyan-300 transition duration-300 block py-2 font-medium border-b border-white/10">
+                            <i class="fas fa-cogs ml-2"></i>
+                            خدمات
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/fa/#news"
+                            class="text-white hover:text-cyan-300 transition duration-300 block py-2 font-medium border-b border-white/10">
+                            <i class="fas fa-newspaper ml-2"></i>
+                            اخبار
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/fa/about"
+                            class="text-white hover:text-cyan-300 transition duration-300 block py-2 font-medium border-b border-white/10">
+                            <i class="fas fa-info-circle ml-2"></i>
+                            درباره ما
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/fa/contact"
+                            class="text-white hover:text-cyan-300 transition duration-300 block py-2 font-medium">
+                            <i class="fas fa-phone ml-2"></i>
+                            تماس با ما
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- دکمه جستجو در موبایل -->
+                <div class="mt-4 pt-4 border-t border-cyan-400/30">
+                    <button
+                        class="w-full bg-white/10 hover:bg-white/20 rounded-lg p-3 flex items-center justify-center transition duration-300">
+                        <i class="fas fa-search text-cyan-300 ml-2"></i>
+                        <span class="text-white font-medium">جستجو در سایت</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- بخش اصلی -->
+    <main>
+        <!-- هیرو -->
+        <section class="pt-24 pb-20 bg-gradient-to-r from-white to-[#c4e1ff]/40 relative overflow-hidden ">
+            <!-- دایره های شناور با رنگ‌های سفارشی -->
+            <div
+                class="absolute top-0 left-0 w-72 h-72 bg-[#ccf8fd] rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse">
+            </div>
+            <div
+                class="absolute top-0 right-0 w-72 h-72 bg-[#aedeed] rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-2000">
+            </div>
+            <div
+                class="absolute -bottom-8 left-20 w-72 h-72 bg-[#c5e1ff] rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-4000">
+            </div>
+
+            <div class="container mx-auto px-4 flex flex-col md:flex-row items-center  justify-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 text-right">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6 leading-tight">
+                        طراحی مدرن و
+                        <span
+                            class="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">خلاقانه</span>
+                        برای کسب‌وکار شما
+                    </h1>
+                    <p class="text-gray-600 text-lg mb-8">
+                        ما با استفاده از <span class="text-blue-600 font-semibold">جدیدترین تکنولوژی‌ها</span> و
+                        طراحی‌های مدرن، محصولی خلق کرده‌ایم که
+                        <span class="text-blue-600 font-semibold">تجربه کاربری بی‌نظیری</span> ارائه می‌دهد.
+                    </p>
+                    <div class="flex flex-wrap gap-4 justify-end">
+                        <button
+                            class="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-3 rounded-full hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 flex items-center hover:from-blue-700 hover:to-blue-800">
+                            شروع کنید
+                            <i class="fas fa-arrow-left mr-2"></i>
+                        </button>
+                        <button
+                            class="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-full hover:bg-blue-600 hover:text-white transition-all duration-300 flex items-center font-semibold">
+                            <i class="fas fa-play-circle ml-2"></i>
+                            مشاهده دمو
+                        </button>
+                    </div>
+                </div>
+
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative">
+                        <div
+                            class="w-80 h-80 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl transform rotate-6">
+                        </div>
+                        <div
+                            class="absolute top-0 right-0 w-80 h-80 bg-white/20 backdrop-blur-sm rounded-2xl shadow-xl -rotate-6">
+                        </div>
+                        <div
+                            class="absolute top-6 left-6 w-72 h-72 bg-white rounded-xl shadow-2xl overflow-hidden border-2 border-blue-200">
+                            <img src="https://www.psychcaremd.com/wp-content/uploads/2014/05/Test-Taking.jpg"
+                                alt="Modern Design"
+                                class="w-full h-full object-cover rounded-xl hover:scale-105 transition-transform duration-300">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- شهرک-->
+        <section id="products"
+            class="py-20 relative bg-gradient-to-r from-white to-[#c4e1ff]/40 bg-center bg-cover overflow-hidden">
+
+            <div class="container mx-auto px-4">
+
+                <div class="text-center relative mb-16">
+
+                    <!-- دایره نقطه‌چین پشت نوشته -->
+
+
+                    <!-- مثلث پشت نوشته -->
+                    <div class="absolute -top-8 -left-8 w-0 h-0 
+                border-l-[50px] border-l-transparent
+                border-b-[80px] border-b-[#c4e1ff]
+                border-r-[50px] border-r-transparent
+                animate-pulse"></div>
+
+                    <!-- نقطه‌های پشت نوشته -->
+                    <div class="absolute top-6 -right-20 flex flex-col gap-3">
+                        <div class="w-4 h-4 bg-[#c4e1ff] rounded-full animate-bounce shadow-lg"></div>
+                        <div class="w-4 h-4 bg-blue-400 rounded-full animate-bounce shadow-lg"
+                            style="animation-delay: 0.2s;"></div>
+                        <div class="w-4 h-4 bg-blue-300 rounded-full animate-bounce shadow-lg"
+                            style="animation-delay: 0.4s;"></div>
+                    </div>
+
+                    <!-- نوشته اصلی با گرادینت -->
+                    <h3 class="text-4xl font-bold text-gray-800 inline-block px-8 py-4 
+               relative z-10
+               border-4 border-blue-400 rounded-3xl 
+               bg-gradient-to-r from-white to-[#c4e1ff]/40
+               shadow-2xl shadow-blue-200/50
+               hover:scale-105 hover:shadow-2xl hover:shadow-blue-300/60 
+               transition-all duration-500">
+                        آخرین اخبار تکنولوژی
+                    </h3>
+
+                </div>
+                <!-- کانتینر کارت‌ها -->
+                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 max-w-8xl mx-auto">
+
+                    <!-- کارت خبر ۱ -->
+                    <div
+                        class="bg-white rounded-3xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all duration-500 hover:scale-105 group relative">
+                        <div
+                            class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl blur opacity-25 group-hover:opacity-75 transition duration-500">
+                        </div>
+                        <div class="relative bg-white rounded-3xl ">
+                            <div class="relative">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2isN62hjsHOC1rLppd2NeAlUrNZaF6IM3dQ&s"
+                                    class="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-500 rounded-t-2xl"
+                                    style="mask-image: url('Untitled-1.png'); -webkit-mask-image: url('Untitled-1.png'); mask-size: contain; -webkit-mask-size: contain;  -webkit-mask-repeat: no-repeat;   mask-repeat: repeat-x; ">
+
+                                <!-- تاریخ -->
+                                <div
+                                    class="absolute top-4 left-4 bg-white/95 backdrop-blur-sm px-4 py-2 rounded-2xl shadow-lg">
+                                    <span class="text-sm font-bold text-gray-800">۱۵ دی ۱۴۰۲</span>
+                                </div>
+
+                                <!-- تگ -->
+                                <div
+                                    class="absolute top-4 right-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-4 py-2 rounded-2xl shadow-lg">
+                                    <span class="text-sm font-bold">تکنولوژی</span>
+                                </div>
+                            </div>
+
+                            <div class="p-7 ">
+                                <h3
+                                    class="text-2xl font-bold text-gray-800 mb-4 hover:text-blue-600 transition-colors cursor-pointer group-hover:translate-x-2 duration-300 leading-tight">
+                                    هوش مصنوعی در طراحی وب
+                                </h3>
+
+                                <p class="text-gray-600 text-base leading-relaxed mb-6 line-clamp-3">
+                                    بررسی تاثیر هوش مصنوعی بر طراحی وب مدرن و آینده این صنعت در جهان دیجیتال...
+                                </p>
+
+                                <div class="flex items-center justify-between pt-5 border-t border-gray-200">
+                                    <div class="flex items-center gap-4">
+                                        <div
+                                            class="w-10 h-10 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full animate-pulse shadow-md">
+                                        </div>
+                                        <div>
+                                            <span class="text-sm font-bold text-gray-700 block">علی محمدی</span>
+                                            <span class="text-xs text-gray-500">نویسنده تخصصی</span>
+                                        </div>
+                                    </div>
+
+                                    <a href="#"
+                                        class="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white px-6 py-3 rounded-xl text-sm font-bold transition-all duration-300 hover:scale-105 hover:shadow-lg flex items-center gap-3 group/btn">
+                                        مطالعه مقاله
+                                        <i
+                                            class="fas fa-arrow-left group-hover/btn:translate-x-2 transition-transform duration-300"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- کارت خبر ۲ -->
+                    <div
+                        class="bg-white rounded-3xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all duration-500 hover:scale-105 group relative">
+                        <div
+                            class="absolute -inset-1 bg-gradient-to-r from-emerald-500 to-green-500 rounded-3xl blur opacity-25 group-hover:opacity-75 transition duration-500">
+                        </div>
+                        <div class="relative bg-white rounded-3xl ">
+                            <div class="relative">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwBksT-xpMBZa5pcwtun0plLV0WfLAlY1PUw&s"
+                                    class="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-500 rounded-t-2xl"
+                                    style="mask-image: url('Untitled-1.png'); -webkit-mask-image: url('Untitled-1.png'); mask-size: contain; -webkit-mask-size: contain;  -webkit-mask-repeat: no-repeat;   mask-repeat: repeat-x; ">
+
+                                <div
+                                    class="absolute top-4 left-4 bg-white/95 backdrop-blur-sm px-4 py-2 rounded-2xl shadow-lg">
+                                    <span class="text-sm font-bold text-gray-800">۱۲ دی ۱۴۰۲</span>
+                                </div>
+
+                                <div
+                                    class="absolute top-4 right-4 bg-gradient-to-r from-emerald-500 to-green-500 text-white px-4 py-2 rounded-2xl shadow-lg">
+                                    <span class="text-sm font-bold">استارتاپ</span>
+                                </div>
+                            </div>
+
+                            <div class="p-7">
+                                <h3
+                                    class="text-2xl font-bold text-gray-800 mb-4 hover:text-emerald-600 transition-colors cursor-pointer group-hover:translate-x-2 duration-300 leading-tight">
+                                    راه‌اندازی کسب‌وکار آنلاین
+                                </h3>
+
+                                <p class="text-gray-600 text-base leading-relaxed mb-6 line-clamp-3">
+                                    مراحل راه‌اندازی یک استارتاپ موفق در فضای دیجیتال و چالش‌های پیش رو...
+                                </p>
+
+                                <div class="flex items-center justify-between pt-5 border-t border-gray-200">
+                                    <div class="flex items-center gap-4">
+                                        <div class="w-10 h-10 bg-gradient-to-r from-emerald-400 to-green-400 rounded-full animate-bounce shadow-md"
+                                            style="animation-delay: 0.2s;"></div>
+                                        <div>
+                                            <span class="text-sm font-bold text-gray-700 block">سارا احمدی</span>
+                                            <span class="text-xs text-gray-500">کارآفرین</span>
+                                        </div>
+                                    </div>
+
+                                    <a href="#"
+                                        class="bg-gradient-to-r from-emerald-500 to-green-500 hover:from-emerald-600 hover:to-green-600 text-white px-6 py-3 rounded-xl text-sm font-bold transition-all duration-300 hover:scale-105 hover:shadow-lg flex items-center gap-3 group/btn">
+                                        مطالعه مقاله
+                                        <i
+                                            class="fas fa-arrow-left group-hover/btn:translate-x-2 transition-transform duration-300"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- کارت خبر ۳ -->
+                    <div
+                        class="bg-white rounded-3xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all duration-500 hover:scale-105 group relative">
+                        <div
+                            class="absolute -inset-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-3xl blur opacity-25 group-hover:opacity-75 transition duration-500">
+                        </div>
+                        <div class="relative bg-white rounded-3xl ">
+                            <div class="relative">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2Q0q2VrVwJ2Q9Q6Y6X2Q2Q2Q2Q2Q2Q2Q2Q2Q&s"
+                                    class="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-500 rounded-t-2xl"
+                                    style="mask-image: url('Untitled-1.png'); -webkit-mask-image: url('Untitled-1.png'); mask-size: contain; -webkit-mask-size: contain;  -webkit-mask-repeat: no-repeat;   mask-repeat: repeat-x; ">
+
+                                <div
+                                    class="absolute top-4 left-4 bg-white/95 backdrop-blur-sm px-4 py-2 rounded-2xl shadow-lg">
+                                    <span class="text-sm font-bold text-gray-800">۱۰ دی ۱۴۰۲</span>
+                                </div>
+
+                                <div
+                                    class="absolute top-4 right-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-2xl shadow-lg">
+                                    <span class="text-sm font-bold">برنامه‌نویسی</span>
+                                </div>
+                            </div>
+
+                            <div class="p-7">
+                                <h3
+                                    class="text-2xl font-bold text-gray-800 mb-4 hover:text-purple-600 transition-colors cursor-pointer group-hover:translate-x-2 duration-300 leading-tight">
+                                    فریمورک‌های Frontend
+                                </h3>
+
+                                <p class="text-gray-600 text-base leading-relaxed mb-6 line-clamp-3">
+                                    مقایسه فریمورک‌های مدرن Frontend و انتخاب بهترین گزینه برای پروژه‌های مختلف...
+                                </p>
+
+                                <div class="flex items-center justify-between pt-5 border-t border-gray-200">
+                                    <div class="flex items-center gap-4">
+                                        <div class="w-10 h-10 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full animate-spin shadow-md"
+                                            style="animation-duration: 3s;"></div>
+                                        <div>
+                                            <span class="text-sm font-bold text-gray-700 block">رضا کریمی</span>
+                                            <span class="text-xs text-gray-500">توسعه‌دهنده</span>
+                                        </div>
+                                    </div>
+
+                                    <a href="#"
+                                        class="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-6 py-3 rounded-xl text-sm font-bold transition-all duration-300 hover:scale-105 hover:shadow-lg flex items-center gap-3 group/btn">
+                                        مطالعه مقاله
+                                        <i
+                                            class="fas fa-arrow-left group-hover/btn:translate-x-2 transition-transform duration-300"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- بخش فرصت های شغلی -->
+        <section class="py-20 bg-[url('courses-1.png')] overflow-hidden">
+            <!-- تایتل ملوس -->
+            <div class="text-center relative mb-16 ">
+                <!-- دایره نقطه‌چین پشت نوشته -->
+                <div
+                    class="absolute -top-8 -left-8 w-32 h-32 border-4 border-dashed border-blue-400/60 rounded-full animate-spin">
+                </div>
+
+                <!-- نوشته اصلی با گرادینت -->
+                <h3 class="text-4xl font-bold text-gray-800 inline-block px-8 py-4 
+                   relative z-10
+                   border-4 border-blue-400 rounded-3xl 
+                   bg-gradient-to-r from-white to-[#c4e1ff]/40
+                   shadow-2xl shadow-blue-200/50
+                   hover:scale-105 hover:shadow-2xl hover:shadow-blue-300/60 
+                   transition-all duration-500">
+                    فرصت‌های شغلی
+                </h3>
+            </div>
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-6">
+
+                    <!-- کارت فرصت شغلی ۱ -->
+                    <div class="group  hover:scale-105 transition-all duration-500">
+                        <div
+                            class="relative bg-white rounded-2xl shadow-xl hover:shadow-2xl p-6 pt-12 border border-gray-100 h-full">
+                            <!-- آیکون بیرون از کارت -->
+                            <div
+                                class="absolute -top-6 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform duration-300 border-4 border-white z-20">
+                                <i class="fas fa-code text-white text-xl"></i>
+                            </div>
+
+                            <div class="mb-4 text-center">
+                                <h3
+                                    class="text-lg font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">
+                                    توسعه‌دهنده Frontend</h3>
+                                <div class="flex items-center justify-center gap-2 text-gray-600 mb-4">
+                                    <i class="fas fa-building text-blue-400 text-sm"></i>
+                                    <span class="text-xs">شرکت فناوری نوین</span>
+                                </div>
+                            </div>
+
+                            <!-- اطلاعات شغلی - روبروی هم -->
+                            <div class="grid grid-cols-2 gap-3 mb-4">
+                                <div class="text-center">
+                                    <div
+                                        class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-1">
+                                        <i class="fas fa-venus-mars text-blue-500 text-sm"></i>
+                                    </div>
+                                    <span class="text-xs text-gray-500 block">جنسیت</span>
+                                    <span class="text-gray-700 font-medium text-sm">آقا / خانم</span>
+                                </div>
+
+                                <div class="text-center">
+                                    <div
+                                        class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-1">
+                                        <i class="fas fa-briefcase text-green-500 text-sm"></i>
+                                    </div>
+                                    <span class="text-xs text-gray-500 block">نوع کار</span>
+                                    <span class="text-gray-700 font-medium text-sm">تمام وقت</span>
+                                </div>
+
+
+                            </div>
+
+                            <!-- دکمه اقدام -->
+                            <div class="flex gap-2">
+                                <button
+                                    class="flex-1 bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white py-2 rounded-lg text-xs font-bold transition-all duration-300 hover:scale-105">
+                                    ارسال رزومه
+                                </button>
+                                <button
+                                    class="w-10 h-10 bg-gray-100 hover:bg-gray-200 text-gray-600 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-105">
+                                    <i class="far fa-bookmark text-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- کارت فرصت شغلی ۲ -->
+                    <div class="group hover:scale-105 transition-all duration-500">
+                        <div
+                            class="relative bg-white rounded-2xl shadow-xl hover:shadow-2xl p-6 pt-12 border border-gray-100 h-full">
+                            <!-- آیکون بیرون از کارت -->
+                            <div
+                                class="absolute -top-6 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform duration-300 border-4 border-white z-20">
+                                <i class="fas fa-database text-white text-xl"></i>
+                            </div>
+
+                            <div class="mb-4 text-center">
+                                <h3
+                                    class="text-lg font-bold text-gray-800 mb-2 group-hover:text-green-600 transition-colors">
+                                    تحلیل‌گر داده</h3>
+                                <div class="flex items-center justify-center gap-2 text-gray-600 mb-4">
+                                    <i class="fas fa-building text-green-400 text-sm"></i>
+                                    <span class="text-xs">شرکت داده‌کاوی</span>
+                                </div>
+                            </div>
+
+                            <!-- اطلاعات شغلی - روبروی هم -->
+                            <div class="grid grid-cols-2 gap-3 mb-4">
+                                <div class="text-center">
+                                    <div
+                                        class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-1">
+                                        <i class="fas fa-venus-mars text-blue-500 text-sm"></i>
+                                    </div>
+                                    <span class="text-xs text-gray-500 block">جنسیت</span>
+                                    <span class="text-gray-700 font-medium text-sm">آقا / خانم</span>
+                                </div>
+
+                                <div class="text-center">
+                                    <div
+                                        class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-1">
+                                        <i class="fas fa-briefcase text-green-500 text-sm"></i>
+                                    </div>
+                                    <span class="text-xs text-gray-500 block">نوع کار</span>
+                                    <span class="text-gray-700 font-medium text-sm">پاره وقت</span>
+                                </div>
+
+
+                            </div>
+
+                            <!-- دکمه اقدام -->
+                            <div class="flex gap-2">
+                                <button
+                                    class="flex-1 bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white py-2 rounded-lg text-xs font-bold transition-all duration-300 hover:scale-105">
+                                    ارسال رزومه
+                                </button>
+                                <button
+                                    class="w-10 h-10 bg-gray-100 hover:bg-gray-200 text-gray-600 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-105">
+                                    <i class="far fa-bookmark text-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- کارت فرصت شغلی ۳ -->
+                    <div class="group scale-105 hover:scale-100 transition-all duration-500">
+                        <div
+                            class="relative bg-white rounded-2xl shadow-xl hover:shadow-2xl p-6 pt-12 border border-gray-100 h-full">
+                            <!-- آیکون بیرون از کارت -->
+                            <div
+                                class="absolute -top-6 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform duration-300 border-4 border-white z-20">
+                                <i class="fas fa-paint-brush text-white text-xl"></i>
+                            </div>
+
+                            <div class="mb-4 text-center">
+                                <h3
+                                    class="text-lg font-bold text-gray-800 mb-2 group-hover:text-purple-600 transition-colors">
+                                    طراح UI/UX</h3>
+                                <div class="flex items-center justify-center gap-2 text-gray-600 mb-4">
+                                    <i class="fas fa-building text-purple-400 text-sm"></i>
+                                    <span class="text-xs">استودیو طراحی</span>
+                                </div>
+                            </div>
+
+                            <!-- اطلاعات شغلی - روبروی هم -->
+                            <div class="grid grid-cols-2 gap-3 mb-4">
+                                <div class="text-center">
+                                    <div
+                                        class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-1">
+                                        <i class="fas fa-venus-mars text-blue-500 text-sm"></i>
+                                    </div>
+                                    <span class="text-xs text-gray-500 block">جنسیت</span>
+                                    <span class="text-gray-700 font-medium text-sm">آقا / خانم</span>
+                                </div>
+
+                                <div class="text-center">
+                                    <div
+                                        class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-1">
+                                        <i class="fas fa-briefcase text-green-500 text-sm"></i>
+                                    </div>
+                                    <span class="text-xs text-gray-500 block">نوع کار</span>
+                                    <span class="text-gray-700 font-medium text-sm">دورکاری</span>
+                                </div>
+
+
+                            </div>
+
+                            <!-- دکمه اقدام -->
+                            <div class="flex gap-2">
+                                <button
+                                    class="flex-1 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white py-2 rounded-lg text-xs font-bold transition-all duration-300 hover:scale-105">
+                                    ارسال رزومه
+                                </button>
+                                <button
+                                    class="w-10 h-10 bg-gray-100 hover:bg-gray-200 text-gray-600 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-105">
+                                    <i class="far fa-bookmark text-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- کارت فرصت شغلی ۴ -->
+                    <div class="group hover:scale-105 transition-all duration-500">
+                        <div
+                            class="relative bg-white rounded-2xl shadow-xl hover:shadow-2xl p-6 pt-12 border border-gray-100 h-full">
+                            <!-- آیکون بیرون از کارت -->
+                            <div
+                                class="absolute -top-6 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform duration-300 border-4 border-white z-20">
+                                <i class="fas fa-mobile-alt text-white text-xl"></i>
+                            </div>
+
+                            <div class="mb-4 text-center">
+                                <h3
+                                    class="text-lg font-bold text-gray-800 mb-2 group-hover:text-orange-600 transition-colors">
+                                    توسعه‌دهنده موبایل</h3>
+                                <div class="flex items-center justify-center gap-2 text-gray-600 mb-4">
+                                    <i class="fas fa-building text-orange-400 text-sm"></i>
+                                    <span class="text-xs">استارتاپ موبایل</span>
+                                </div>
+                            </div>
+
+                            <!-- اطلاعات شغلی - روبروی هم -->
+                            <div class="grid grid-cols-2 gap-3 mb-4">
+                                <div class="text-center">
+                                    <div
+                                        class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-1">
+                                        <i class="fas fa-venus-mars text-blue-500 text-sm"></i>
+                                    </div>
+                                    <span class="text-xs text-gray-500 block">جنسیت</span>
+                                    <span class="text-gray-700 font-medium text-sm">آقا / خانم</span>
+                                </div>
+
+                                <div class="text-center">
+                                    <div
+                                        class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-1">
+                                        <i class="fas fa-briefcase text-green-500 text-sm"></i>
+                                    </div>
+                                    <span class="text-xs text-gray-500 block">نوع کار</span>
+                                    <span class="text-gray-700 font-medium text-sm">تمام وقت</span>
+                                </div>
+
+
+                            </div>
+
+                            <!-- دکمه اقدام -->
+                            <div class="flex gap-2">
+                                <button
+                                    class="flex-1 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white py-2 rounded-lg text-xs font-bold transition-all duration-300 hover:scale-105">
+                                    ارسال رزومه
+                                </button>
+                                <button
+                                    class="w-10 h-10 bg-gray-100 hover:bg-gray-200 text-gray-600 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-105">
+                                    <i class="far fa-bookmark text-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- کارت فرصت شغلی ۵ -->
+                    <div class="group  hover:scale-105 transition-all duration-500">
+                        <div
+                            class="relative bg-white rounded-2xl shadow-xl hover:shadow-2xl p-6 pt-12 border border-gray-100 h-full">
+                            <!-- آیکون بیرون از کارت -->
+                            <div
+                                class="absolute -top-6 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-gradient-to-br from-teal-500 to-cyan-500 rounded-2xl flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform duration-300 border-4 border-white z-20">
+                                <i class="fas fa-shield-alt text-white text-xl"></i>
+                            </div>
+
+                            <div class="mb-4 text-center">
+                                <h3
+                                    class="text-lg font-bold text-gray-800 mb-2 group-hover:text-teal-600 transition-colors">
+                                    متخصص امنیت</h3>
+                                <div class="flex items-center justify-center gap-2 text-gray-600 mb-4">
+                                    <i class="fas fa-building text-teal-400 text-sm"></i>
+                                    <span class="text-xs">شرکت امنیتی</span>
+                                </div>
+                            </div>
+
+                            <!-- اطلاعات شغلی - روبروی هم -->
+                            <div class="grid grid-cols-2 gap-3 mb-4">
+                                <div class="text-center">
+                                    <div
+                                        class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-1">
+                                        <i class="fas fa-venus-mars text-blue-500 text-sm"></i>
+                                    </div>
+                                    <span class="text-xs text-gray-500 block">جنسیت</span>
+                                    <span class="text-gray-700 font-medium text-sm">آقا</span>
+                                </div>
+
+                                <div class="text-center">
+                                    <div
+                                        class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-1">
+                                        <i class="fas fa-briefcase text-green-500 text-sm"></i>
+                                    </div>
+                                    <span class="text-xs text-gray-500 block">نوع کار</span>
+                                    <span class="text-gray-700 font-medium text-sm">تمام وقت</span>
+                                </div>
+
+
+                            </div>
+
+                            <!-- دکمه اقدام -->
+                            <div class="flex gap-2">
+                                <button
+                                    class="flex-1 bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white py-2 rounded-lg text-xs font-bold transition-all duration-300 hover:scale-105">
+                                    ارسال رزومه
+                                </button>
+                                <button
+                                    class="w-10 h-10 bg-gray-100 hover:bg-gray-200 text-gray-600 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-105">
+                                    <i class="far fa-bookmark text-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- بخش درباره ما -->
+        <section id="about" class="py-20 bg-white  bg-center bg-cover overflow-hidden relative">
+            <!-- دکوراسیون پس‌زمینه آبی -->
+            <div class="absolute inset-0 overflow-hidden pointer-events-none">
+                <div class="absolute -top-20 -right-20 w-96 h-96 bg-blue-200 rounded-full blur-3xl opacity-60">
+                </div>
+                <div class="absolute -bottom-20 -left-20 w-96 h-96 bg-cyan-200 rounded-full blur-3xl opacity-60">
+                </div>
+                <div
+                    class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-sky-100 rounded-full blur-3xl opacity-40">
+                </div>
+            </div>
+            <div class="container mx-auto px-4 ">
+                <div class="text-center relative  mb-10">
+
+                    <!-- دایره نقطه‌چین پشت نوشته -->
+                    <div
+                        class="absolute -top-8 -left-8 w-32 h-32 border-4 border-dashed border-blue-300 rounded-full animate-spin">
+                    </div>
+
+                    <!-- مثلث پشت نوشته -->
+                    <div class="absolute -bottom-10 -right-10 w-0 h-0 
+                    border-l-[40px] border-l-transparent
+                    border-b-[60px] border-b-green-300
+                    border-r-[40px] border-r-transparent
+                    animate-pulse"></div>
+
+                    <!-- نقطه‌های پشت نوشته -->
+                    <div class="absolute top-4 -right-16 flex flex-col gap-2">
+                        <div class="w-3 h-3 bg-purple-400 rounded-full animate-bounce"></div>
+                        <div class="w-3 h-3 bg-yellow-400 rounded-full animate-bounce" style="animation-delay: 0.2s;">
+                        </div>
+                        <div class="w-3 h-3 bg-red-400 rounded-full animate-bounce" style="animation-delay: 0.4s;">
+                        </div>
+                    </div>
+
+                    <!-- نوشته اصلی -->
+                    <h3 class="text-3xl font-bold text-gray-800 inline-block px-6 py-3 
+                   relative z-10
+                   border-4 border-blue-500 rounded-2xl 
+                   bg-white shadow-lg
+                   hover:scale-105 transition-transform duration-300">
+                        شهرک های صنعتی ما
+                    </h3>
+
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ">
+
+
+                    <div class="max-w-6xl mx-auto">
+                        <div class="flex flex-col items-center space-y-6 lg:space-y-8">
+
+
+                            <!-- کارت 2 -->
+                            <div
+                                class="scale-90 md:scale-100 group relative w-full max-w-2xl lg:max-w-3xl xl:max-w-4xl bg-white rounded-2xl lg:rounded-3xl p-6 lg:p-8 h-auto min-h-[180px] lg:min-h-[200px] border border-gray-200 hover:border-amber-400 transition-all duration-500 hover:scale-[1.01] lg:hover:scale-[1.02] shadow-lg hover:shadow-xl overflow-hidden">
+
+                                <div class="flex flex-col sm:flex-row items-start gap-4 lg:gap-6 h-full">
+                                    <!-- آیکون -->
+                                    <div
+                                        class="relative z-10 w-12 h-12 lg:w-16 lg:h-16 bg-gradient-to-br from-amber-400 to-orange-500 rounded-xl lg:rounded-2xl flex items-center justify-center shadow-md flex-shrink-0 group-hover:scale-105 lg:group-hover:scale-110 transition-transform mx-auto sm:mx-0">
+                                        <i class="fas fa-star text-white text-lg lg:text-xl"></i>
+                                    </div>
+
+                                    <!-- محتوا -->
+                                    <div class="relative z-10 flex-1 text-center sm:text-right w-full">
+                                        <h3
+                                            class="text-xl lg:text-2xl font-bold text-gray-800 mb-2 lg:mb-3 group-hover:text-amber-600 transition-colors leading-tight">
+                                            دانش‌آموزان پرورش یافته
+                                        </h3>
+                                        <p
+                                            class="text-gray-600 leading-relaxed text-justify text-sm lg:text-base xl:text-lg">
+                                            ما افتخار داریم که هزاران دانش‌آموز را در مسیر یادگیری و پیشرفت همراهی
+                                            کرده‌ایم و به آن‌ها در رسیدن به اهدافشان کمک کرده‌ایم. موفقیت آن‌ها بزرگترین
+                                            افتخار ماست.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- دکوراسیون -->
+                                <div
+                                    class="absolute -top-2 -left-2 w-12 h-12 lg:w-16 lg:h-16 bg-amber-100 rounded-full opacity-60 group-hover:opacity-80 transition-opacity">
+                                </div>
+                                <div
+                                    class="absolute -bottom-3 -right-3 w-14 h-14 lg:w-20 lg:h-20 bg-orange-100 rounded-full opacity-60 group-hover:opacity-80 transition-opacity">
+                                </div>
+                            </div>
+
+                            <!-- کارت 3 -->
+                            <div
+                                class="2xl:translate-x-20  group relative w-full max-w-2xl lg:max-w-3xl xl:max-w-4xl bg-white rounded-2xl lg:rounded-3xl p-6 lg:p-8 h-auto min-h-[180px] lg:min-h-[200px] border border-gray-200 hover:border-emerald-400 transition-all duration-500 hover:scale-[1.01] lg:hover:scale-[1.02] shadow-lg hover:shadow-xl overflow-hidden">
+
+                                <div class="flex flex-col sm:flex-row items-start gap-4 lg:gap-6 h-full">
+                                    <!-- آیکون -->
+                                    <div
+                                        class="relative z-10 w-12 h-12 lg:w-16 lg:h-16 bg-gradient-to-br from-emerald-400 to-green-500 rounded-xl lg:rounded-2xl flex items-center justify-center shadow-md flex-shrink-0 group-hover:scale-105 lg:group-hover:scale-110 transition-transform mx-auto sm:mx-0">
+                                        <i class="fas fa-book text-white text-lg lg:text-xl"></i>
+                                    </div>
+
+                                    <!-- محتوا -->
+                                    <div class="relative z-10 flex-1 text-center sm:text-right w-full">
+                                        <h3
+                                            class="text-xl lg:text-2xl font-bold text-gray-800 mb-2 lg:mb-3 group-hover:text-emerald-600 transition-colors leading-tight">
+                                            آخرین دوره‌ها
+                                        </h3>
+                                        <p
+                                            class="text-gray-600 leading-relaxed text-justify text-sm lg:text-base xl:text-lg">
+                                            ما به طور مداوم دوره‌های آموزشی جدید و به روز را اضافه می‌کنیم تا همیشه به
+                                            جدیدترین محتوای آموزشی دسترسی داشته باشید. این دوره‌ها با توجه به نیازهای
+                                            روز بازار کار طراحی شده‌اند.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- دکوراسیون -->
+                                <div
+                                    class="absolute -top-3 -right-3 w-14 h-14 lg:w-20 lg:h-20 bg-emerald-100 rounded-full opacity-60 group-hover:opacity-80 transition-opacity">
+                                </div>
+                                <div
+                                    class="absolute -bottom-4 -left-4 w-16 h-16 lg:w-24 lg:h-24 bg-green-100 rounded-full opacity-60 group-hover:opacity-80 transition-opacity">
+                                </div>
+                            </div>
+
+                            <!-- کارت 4 -->
+                            <div
+                                class="scale-90 md:scale-100 group relative w-full max-w-2xl lg:max-w-3xl xl:max-w-4xl bg-white rounded-2xl lg:rounded-3xl p-6 lg:p-8 h-auto min-h-[180px] lg:min-h-[200px] border border-gray-200 hover:border-purple-400 transition-all duration-500 hover:scale-[1.01] lg:hover:scale-[1.02] shadow-lg hover:shadow-xl overflow-hidden">
+
+                                <div class="flex flex-col sm:flex-row items-start gap-4 lg:gap-6 h-full">
+                                    <!-- آیکون -->
+                                    <div
+                                        class="relative z-10 w-12 h-12 lg:w-16 lg:h-16 bg-gradient-to-br from-purple-400 to-pink-500 rounded-xl lg:rounded-2xl flex items-center justify-center shadow-md flex-shrink-0 group-hover:scale-105 lg:group-hover:scale-110 transition-transform mx-auto sm:mx-0">
+                                        <i class="fas fa-laptop-code text-white text-lg lg:text-xl"></i>
+                                    </div>
+
+                                    <!-- محتوا -->
+                                    <div class="relative z-10 flex-1 text-center sm:text-right w-full">
+                                        <h3
+                                            class="text-xl lg:text-2xl font-bold text-gray-800 mb-2 lg:mb-3 group-hover:text-purple-600 transition-colors leading-tight">
+                                            محتوای تعاملی
+                                        </h3>
+                                        <p
+                                            class="text-gray-600 leading-relaxed text-justify text-sm lg:text-base xl:text-lg">
+                                            با محتوای تعاملی و پروژه‌محور ما، یادگیری را به تجربه‌ای لذت‌بخش تبدیل کنید.
+                                            این محتواها به شما کمک می‌کنند مفاهیم را به صورت عملی و ملموس بیاموزید و در
+                                            محیط واقعی به کار بگیرید.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- دکوراسیون -->
+                                <div
+                                    class="absolute -top-2 -left-2 w-12 h-12 lg:w-16 lg:h-16 bg-purple-100 rounded-full opacity-60 group-hover:opacity-80 transition-opacity">
+                                </div>
+                                <div
+                                    class="absolute -bottom-3 -right-3 w-14 h-14 lg:w-20 lg:h-20 bg-pink-100 rounded-full opacity-60 group-hover:opacity-80 transition-opacity">
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+                    <div class="max-w-6xl mx-auto">
+                        <div class="flex flex-col items-center space-y-6 lg:space-y-8">
+
+                            <!-- کارت کارخانه -->
+                            <div
+                                class="scale-90 md:scale-100 group relative w-full max-w-2xl lg:max-w-3xl xl:max-w-4xl bg-white rounded-2xl lg:rounded-3xl p-6 lg:p-8 h-auto min-h-[180px] lg:min-h-[200px] border border-gray-200 hover:border-indigo-400 transition-all duration-500 hover:scale-[1.01] lg:hover:scale-[1.02] shadow-lg hover:shadow-xl overflow-hidden">
+
+                                <div class="flex flex-col sm:flex-row items-start gap-4 lg:gap-6 h-full">
+                                    <!-- آیکون کارخانه -->
+                                    <div
+                                        class="relative z-10 w-12 h-12 lg:w-16 lg:h-16 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl lg:rounded-2xl flex items-center justify-center shadow-md flex-shrink-0 group-hover:scale-105 lg:group-hover:scale-110 transition-transform mx-auto sm:mx-0">
+                                        <i class="fas fa-industry text-white text-lg lg:text-xl"></i>
+                                    </div>
+
+                                    <!-- محتوا -->
+                                    <div class="relative z-10 flex-1 text-center sm:text-right w-full">
+                                        <h3
+                                            class="text-xl lg:text-2xl font-bold text-gray-800 mb-2 lg:mb-3 group-hover:text-indigo-600 transition-colors leading-tight">
+                                            تولید محتوای آموزشی
+                                        </h3>
+                                        <p
+                                            class="text-gray-600 leading-relaxed text-justify text-sm lg:text-base xl:text-lg">
+                                            ما با استفاده از کارخانه تولید محتوای پیشرفته، دوره‌های آموزشی با کیفیت و
+                                            استاندارد تولید می‌کنیم.
+                                            هر محتوا توسط تیم متخصص ما بررسی و به روزرسانی می‌شود تا بهترین تجربه
+                                            یادگیری را برای شما فراهم کنیم.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- دکوراسیون -->
+                                <div
+                                    class="absolute -top-2 -left-2 w-12 h-12 lg:w-16 lg:h-16 bg-indigo-100 rounded-full opacity-60 group-hover:opacity-80 transition-opacity">
+                                </div>
+                                <div
+                                    class="absolute -bottom-3 -right-3 w-14 h-14 lg:w-20 lg:h-20 bg-purple-100 rounded-full opacity-60 group-hover:opacity-80 transition-opacity">
+                                </div>
+                            </div>
+
+
+                            <!-- کارت 3 -->
+                            <div
+                                class="2xl:translate-x-20  group relative w-full max-w-2xl lg:max-w-3xl xl:max-w-4xl bg-white rounded-2xl lg:rounded-3xl p-6 lg:p-8 h-auto min-h-[180px] lg:min-h-[200px] border border-gray-200 hover:border-emerald-400 transition-all duration-500 hover:scale-[1.01] lg:hover:scale-[1.02] shadow-lg hover:shadow-xl overflow-hidden">
+
+                                <div class="flex flex-col sm:flex-row items-start gap-4 lg:gap-6 h-full">
+                                    <!-- آیکون -->
+                                    <div
+                                        class="relative z-10 w-12 h-12 lg:w-16 lg:h-16 bg-gradient-to-br from-emerald-400 to-green-500 rounded-xl lg:rounded-2xl flex items-center justify-center shadow-md flex-shrink-0 group-hover:scale-105 lg:group-hover:scale-110 transition-transform mx-auto sm:mx-0">
+                                        <i class="fas fa-book text-white text-lg lg:text-xl"></i>
+                                    </div>
+
+                                    <!-- محتوا -->
+                                    <div class="relative z-10 flex-1 text-center sm:text-right w-full">
+                                        <h3
+                                            class="text-xl lg:text-2xl font-bold text-gray-800 mb-2 lg:mb-3 group-hover:text-emerald-600 transition-colors leading-tight">
+                                            آخرین دوره‌ها
+                                        </h3>
+                                        <p
+                                            class="text-gray-600 leading-relaxed text-justify text-sm lg:text-base xl:text-lg">
+                                            ما به طور مداوم دوره‌های آموزشی جدید و به روز را اضافه می‌کنیم تا همیشه به
+                                            جدیدترین محتوای آموزشی دسترسی داشته باشید. این دوره‌ها با توجه به نیازهای
+                                            روز بازار کار طراحی شده‌اند.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- دکوراسیون -->
+                                <div
+                                    class="absolute -top-3 -right-3 w-14 h-14 lg:w-20 lg:h-20 bg-emerald-100 rounded-full opacity-60 group-hover:opacity-80 transition-opacity">
+                                </div>
+                                <div
+                                    class="absolute -bottom-4 -left-4 w-16 h-16 lg:w-24 lg:h-24 bg-green-100 rounded-full opacity-60 group-hover:opacity-80 transition-opacity">
+                                </div>
+                            </div>
+
+                            <!-- کارت 4 -->
+                            <div
+                                class="scale-90 md:scale-100 group relative w-full max-w-2xl lg:max-w-3xl xl:max-w-4xl bg-white rounded-2xl lg:rounded-3xl p-6 lg:p-8 h-auto min-h-[180px] lg:min-h-[200px] border border-gray-200 hover:border-purple-400 transition-all duration-500 hover:scale-[1.01] lg:hover:scale-[1.02] shadow-lg hover:shadow-xl overflow-hidden">
+
+                                <div class="flex flex-col sm:flex-row items-start gap-4 lg:gap-6 h-full">
+                                    <!-- آیکون -->
+                                    <div
+                                        class=" relative z-10 w-12 h-12 lg:w-16 lg:h-16 bg-gradient-to-br from-purple-400 to-pink-500 rounded-xl lg:rounded-2xl flex items-center justify-center shadow-md flex-shrink-0 group-hover:scale-105 lg:group-hover:scale-110 transition-transform mx-auto sm:mx-0">
+                                        <i class="fas fa-laptop-code text-white text-lg lg:text-xl"></i>
+                                    </div>
+
+                                    <!-- محتوا -->
+                                    <div class="relative z-10 flex-1 text-center sm:text-right w-full">
+                                        <h3
+                                            class="text-xl lg:text-2xl font-bold text-gray-800 mb-2 lg:mb-3 group-hover:text-purple-600 transition-colors leading-tight">
+                                            محتوای تعاملی
+                                        </h3>
+                                        <p
+                                            class="text-gray-600 leading-relaxed text-justify text-sm lg:text-base xl:text-lg">
+                                            با محتوای تعاملی و پروژه‌محور ما، یادگیری را به تجربه‌ای لذت‌بخش تبدیل کنید.
+                                            این محتواها به شما کمک می‌کنند مفاهیم را به صورت عملی و ملموس بیاموزید و در
+                                            محیط واقعی به کار بگیرید.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- دکوراسیون -->
+                                <div
+                                    class="absolute -top-2 -left-2 w-12 h-12 lg:w-16 lg:h-16 bg-purple-100 rounded-full opacity-60 group-hover:opacity-80 transition-opacity">
+                                </div>
+                                <div
+                                    class="absolute -bottom-3 -right-3 w-14 h-14 lg:w-20 lg:h-20 bg-pink-100 rounded-full opacity-60 group-hover:opacity-80 transition-opacity">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+        <!-- سکشن محصولات -->
+        <section class="w-full bg-white relative">
+            <!-- دکوراسیون پس‌زمینه آبی -->
+            <div class="absolute inset-0 overflow-hidden pointer-events-none">
+
+                <div class="absolute -top-72 -left-20 w-96 h-96 bg-cyan-200 rounded-full blur-3xl opacity-60">
+                </div>
+                <div
+                    class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-sky-100 rounded-full blur-3xl opacity-40">
+                </div>
+
+                <img src="dots-1.png" alt="" class="absolute top-32 right-1/4 animate-bounce hidden md:block">
+                <img src="vector-2.png" alt="" class="absolute top-96 left-1/4 hidden md:block">
+            </div>
+            <div class="container  mx-auto px-4 py-16">
+
+                <!-- هدر -->
+                <div class="text-center mb-16 relative z-10">
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+                        محصولات ویژه
+                    </h2>
+                    <p class="text-gray-600 text-lg md:text-xl max-w-2xl mx-auto">
+                        بهترین دوره‌های آموزشی با طراحی مینیمال و کاربردی
+                    </p>
+                </div>
+
+                <!-- شبکه کارت‌ها -->
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 relative z-10">
+
+                    <!-- کارت 1 -->
+                    <div
+                        class="group relative bg-white rounded-2xl p-4 border border-gray-200 hover:border-cyan-400 transition-all duration-500 hover:scale-105 hover:shadow-lg cursor-pointer shadow-sm">
+                        <!-- آیکون -->
+                        <div
+                            class="relative w-12 h-12 mx-auto mb-3 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-code text-white text-lg"></i>
+                        </div>
+
+                        <!-- عنوان -->
+                        <h3
+                            class="text-gray-800 text-sm font-medium text-center leading-tight group-hover:text-cyan-600 transition-colors">
+                            برنامه نویسی وب
+                        </h3>
+
+                        <!-- افکت نور -->
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        </div>
+                    </div>
+
+                    <!-- کارت 2 -->
+                    <div
+                        class="group relative bg-white rounded-2xl p-4 border border-gray-200 hover:border-emerald-400 transition-all duration-500 hover:scale-105 hover:shadow-lg cursor-pointer shadow-sm">
+                        <!-- آیکون -->
+                        <div
+                            class="relative w-12 h-12 mx-auto mb-3 bg-gradient-to-br from-emerald-400 to-green-500 rounded-xl flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-palette text-white text-lg"></i>
+                        </div>
+
+                        <!-- عنوان -->
+                        <h3
+                            class="text-gray-800 text-sm font-medium text-center leading-tight group-hover:text-emerald-600 transition-colors">
+                            طراحی UI/UX
+                        </h3>
+
+                        <!-- افکت نور -->
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-green-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        </div>
+                    </div>
+
+                    <!-- کارت 3 -->
+                    <div
+                        class="group relative bg-white rounded-2xl p-4 border border-gray-200 hover:border-amber-400 transition-all duration-500 hover:scale-105 hover:shadow-lg cursor-pointer shadow-sm">
+                        <!-- آیکون -->
+                        <div
+                            class="relative w-12 h-12 mx-auto mb-3 bg-gradient-to-br from-amber-400 to-orange-500 rounded-xl flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-mobile-alt text-white text-lg"></i>
+                        </div>
+
+                        <!-- عنوان -->
+                        <h3
+                            class="text-gray-800 text-sm font-medium text-center leading-tight group-hover:text-amber-600 transition-colors">
+                            اپلیکیشن موبایل
+                        </h3>
+
+                        <!-- افکت نور -->
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-amber-500/5 to-orange-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        </div>
+                    </div>
+
+                    <!-- کارت 4 -->
+                    <div
+                        class="group relative bg-white rounded-2xl p-4 border border-gray-200 hover:border-purple-400 transition-all duration-500 hover:scale-105 hover:shadow-lg cursor-pointer shadow-sm">
+                        <!-- آیکون -->
+                        <div
+                            class="relative w-12 h-12 mx-auto mb-3 bg-gradient-to-br from-purple-400 to-pink-500 rounded-xl flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-database text-white text-lg"></i>
+                        </div>
+
+                        <!-- عنوان -->
+                        <h3
+                            class="text-gray-800 text-sm font-medium text-center leading-tight group-hover:text-purple-600 transition-colors">
+                            پایگاه داده
+                        </h3>
+
+                        <!-- افکت نور -->
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-pink-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        </div>
+                    </div>
+
+                    <!-- کارت 5 -->
+                    <div
+                        class="group relative bg-white rounded-2xl p-4 border border-gray-200 hover:border-red-400 transition-all duration-500 hover:scale-105 hover:shadow-lg cursor-pointer shadow-sm">
+                        <!-- آیکون -->
+                        <div
+                            class="relative w-12 h-12 mx-auto mb-3 bg-gradient-to-br from-red-400 to-rose-500 rounded-xl flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-shield-alt text-white text-lg"></i>
+                        </div>
+
+                        <!-- عنوان -->
+                        <h3
+                            class="text-gray-800 text-sm font-medium text-center leading-tight group-hover:text-red-600 transition-colors">
+                            امنیت سایبری
+                        </h3>
+
+                        <!-- افکت نور -->
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-red-500/5 to-rose-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- دکمه مشاهده بیشتر -->
+                <div class="text-center mt-12 relative z-10">
+                    <button
+                        class="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-8 py-3 rounded-xl font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                        مشاهده همه محصولات
+                    </button>
+                </div>
+
+        </section>
+
+
+
+
+
+        <section class="max-w-6xl mx-auto px-4 py-10 bg-white overflow-hidden"
+            style="background-color: white !important;
+            background: url('data:image/svg+xml;utf8,%3Csvg viewBox=%220 0 1000 1000%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3ClinearGradient id=%22b%22 gradientTransform=%22rotate(-45 .5 .5)%22%3E%3Cstop offset=%220%25%22 stop-color=%22%23FFDEE9%22%2F%3E%3Cstop offset=%22100%25%22 stop-color=%22%23B5FFFC%22%2F%3E%3C%2FlinearGradient%3E%3CclipPath id=%22a%22%3E%3Cpath fill=%22currentColor%22 d=%22M823 734Q652 968 375 880T107.5 507Q117 222 382 135.5t438.5 139Q994 500 823 734Z%22%2F%3E%3C%2FclipPath%3E%3C%2Fdefs%3E%3Cg clip-path=%22url(%23a)%22%3E%3Cpath fill=%22url(%23b)%22 d=%22M823 734Q652 968 375 880T107.5 507Q117 222 382 135.5t438.5 139Q994 500 823 734Z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E') top center / cover repeat;">
+
+            <!-- هدر -->
+            <div class="text-center mb-16">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+                    دسترسی‌های شهرک صنعتی شمس‌آباد
+                </h1>
+                <p class="text-gray-600 text-lg md:text-xl max-w-2xl mx-auto">
+                    امکانات و خدمات در دسترس واحدهای صنعتی
+                </p>
+            </div>
+
+            <!-- شبکه کارت‌ها -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+
+                <!-- پمپ بنزین -->
+                <div class="group relative">
+                    <div
+                        class="bg-white/90 backdrop-blur-sm rounded-3xl p-6 shadow-lg border border-white/20 cursor-pointer transition-all duration-300 hover:scale-105 hover:-translate-y-2 hover:shadow-2xl">
+                        <!-- آیکون -->
+                        <div
+                            class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-red-500 to-orange-500 rounded-2xl flex items-center justify-center shadow-md">
+                            <i class="fas fa-gas-pump text-white text-2xl"></i>
+                        </div>
+
+                        <h3
+                            class="text-lg font-bold text-gray-800 text-center mb-2 group-hover:text-red-600 transition-colors">
+                            پمپ بنزین
+                        </h3>
+                        <p class="text-gray-500 text-sm text-center">
+                            بلوار اصلی
+                        </p>
+                    </div>
+
+                    <!-- پاپ‌آپ -->
+                    <div
+                        class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-3 hidden group-hover:block z-20">
+                        <div class="bg-gray-800 text-white text-sm rounded-xl py-3 px-4 whitespace-nowrap shadow-2xl">
+                            <div class="font-bold mb-1 text-red-300">⛽ پمپ بنزین شمس‌آباد</div>
+                            <div class="text-gray-200">بلوار اصلی، جنب درب ورودی شماره ۱</div>
+                            <div class="text-gray-300 text-xs mt-1">۲۴ ساعته</div>
+                        </div>
+                        <div
+                            class="w-3 h-3 bg-gray-800 transform rotate-45 absolute -bottom-1 left-1/2 -translate-x-1/2">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- عابربانک -->
+                <div class="group relative">
+                    <div
+                        class="bg-white/90 backdrop-blur-sm rounded-3xl p-6 shadow-lg border border-white/20 cursor-pointer transition-all duration-300 hover:scale-105 hover:-translate-y-2 hover:shadow-2xl">
+                        <!-- آیکون -->
+                        <div
+                            class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center shadow-md">
+                            <i class="fas fa-university text-white text-2xl"></i>
+                        </div>
+
+                        <h3
+                            class="text-lg font-bold text-gray-800 text-center mb-2 group-hover:text-green-600 transition-colors">
+                            عابربانک
+                        </h3>
+                        <p class="text-gray-500 text-sm text-center">
+                            بانک ملی و سپه
+                        </p>
+                    </div>
+
+                    <!-- پاپ‌آپ -->
+                    <div
+                        class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-3 hidden group-hover:block z-20">
+                        <div class="bg-gray-800 text-white text-sm rounded-xl py-3 px-4 whitespace-nowrap shadow-2xl">
+                            <div class="font-bold mb-1 text-green-300">🏦 بانک ملی و سپه</div>
+                            <div class="text-gray-200">خیابان صنعت، روبروی سالن اجتماعات</div>
+                            <div class="text-gray-300 text-xs mt-1">۸ صبح تا ۱۶ عصر</div>
+                        </div>
+                        <div
+                            class="w-3 h-3 bg-gray-800 transform rotate-45 absolute -bottom-1 left-1/2 -translate-x-1/2">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- رستوران -->
+                <div class="group relative">
+                    <div
+                        class="bg-white/90 backdrop-blur-sm rounded-3xl p-6 shadow-lg border border-white/20 cursor-pointer transition-all duration-300 hover:scale-105 hover:-translate-y-2 hover:shadow-2xl">
+                        <!-- آیکون -->
+                        <div
+                            class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-amber-500 to-orange-500 rounded-2xl flex items-center justify-center shadow-md">
+                            <i class="fas fa-utensils text-white text-2xl"></i>
+                        </div>
+
+                        <h3
+                            class="text-lg font-bold text-gray-800 text-center mb-2 group-hover:text-amber-600 transition-colors">
+                            رستوران
+                        </h3>
+                        <p class="text-gray-500 text-sm text-center">
+                            سلف سرویس
+                        </p>
+                    </div>
+
+                    <!-- پاپ‌آپ -->
+                    <div
+                        class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-3 hidden group-hover:block z-20">
+                        <div class="bg-gray-800 text-white text-sm rounded-xl py-3 px-4 whitespace-nowrap shadow-2xl">
+                            <div class="font-bold mb-1 text-amber-300">🍽️ سلف سرویس صنعتی</div>
+                            <div class="text-gray-200">بلوار اصلی، طبقه دوم ساختمان مرکزی</div>
+                            <div class="text-gray-300 text-xs mt-1">۱۱:۳۰ تا ۱۴:۳۰</div>
+                        </div>
+                        <div
+                            class="w-3 h-3 bg-gray-800 transform rotate-45 absolute -bottom-1 left-1/2 -translate-x-1/2">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- درمانگاه -->
+                <div class="group relative">
+                    <div
+                        class="bg-white/90 backdrop-blur-sm rounded-3xl p-6 shadow-lg border border-white/20 cursor-pointer transition-all duration-300 hover:scale-105 hover:-translate-y-2 hover:shadow-2xl">
+                        <!-- آیکون -->
+                        <div
+                            class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-pink-500 to-rose-600 rounded-2xl flex items-center justify-center shadow-md">
+                            <i class="fas fa-hospital text-white text-2xl"></i>
+                        </div>
+
+                        <h3
+                            class="text-lg font-bold text-gray-800 text-center mb-2 group-hover:text-pink-600 transition-colors">
+                            درمانگاه
+                        </h3>
+                        <p class="text-gray-500 text-sm text-center">
+                            خدمات درمانی
+                        </p>
+                    </div>
+
+                    <!-- پاپ‌آپ -->
+                    <div
+                        class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-3 hidden group-hover:block z-20">
+                        <div class="bg-gray-800 text-white text-sm rounded-xl py-3 px-4 whitespace-nowrap shadow-2xl">
+                            <div class="font-bold mb-1 text-pink-300">🏥 درمانگاه صنعتی</div>
+                            <div class="text-gray-200">خیابان سلامت، جنب ساختمان اداری</div>
+                            <div class="text-gray-300 text-xs mt-1">۷:۳۰ تا ۱۵:۳۰</div>
+                        </div>
+                        <div
+                            class="w-3 h-3 bg-gray-800 transform rotate-45 absolute -bottom-1 left-1/2 -translate-x-1/2">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        </div>
+    </main>
+
+    <!-- فوتر -->
+    <footer class="bg-gradient-to-r from-gray-800 to-gray-900 text-white pt-12 pb-8">
+
+
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- ستون ۱: درباره شهرک -->
+                <div class="lg:col-span-2">
+                    <div class="flex items-center mb-6">
+                        <div
+                            class="w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center shadow-lg">
+                            <i class="fas fa-industry text-white text-xl"></i>
+                        </div>
+                        <div class="mr-4">
+                            <h2 class="text-2xl font-bold">شهرک صنعتی شمس آباد</h2>
+                            <p class="text-cyan-300 text-sm">پیشرو در صنعت و فناوری</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed mb-4">
+                        شهرک صنعتی شمس آباد با بهره‌گیری از آخرین تکنولوژی‌های روز دنیا و با دارا بودن زیرساخت‌های
+                        پیشرفته،
+                        میزبان واحدهای صنعتی مدرن و نوآور در حوزه‌های مختلف می‌باشد.
+                    </p>
+                    <div class="flex space-x-4 space-x-reverse">
+                        <div class="flex items-center text-cyan-300">
+                            <i class="fas fa-building text-sm ml-1"></i>
+                            <span class="text-sm">۵۰+ واحد فعال</span>
+                        </div>
+                        <div class="flex items-center text-cyan-300">
+                            <i class="fas fa-users text-sm ml-1"></i>
+                            <span class="text-sm">۲۰۰۰+ شغل</span>
+                        </div>
+                        <div class="flex items-center text-cyan-300">
+                            <i class="fas fa-chart-line text-sm ml-1"></i>
+                            <span class="text-sm">۱۰+ سال سابقه</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ستون ۲: لینک‌های سریع -->
+                <div>
+                    <h3 class="text-lg font-bold mb-6 relative inline-block">
+                        لینک‌های سریع
+                        <div class="absolute -bottom-2 right-0 w-1/2 h-0.5 bg-cyan-400"></div>
+                    </h3>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="#"
+                                class="text-gray-300 hover:text-cyan-300 transition-all duration-300 flex items-center group">
+                                <i
+                                    class="fas fa-arrow-left text-xs ml-2 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300"></i>
+                                خانه
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="text-gray-300 hover:text-cyan-300 transition-all duration-300 flex items-center group">
+                                <i
+                                    class="fas fa-arrow-left text-xs ml-2 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300"></i>
+                                واحدهای صنعتی
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="text-gray-300 hover:text-cyan-300 transition-all duration-300 flex items-center group">
+                                <i
+                                    class="fas fa-arrow-left text-xs ml-2 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300"></i>
+                                خدمات
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="text-gray-300 hover:text-cyan-300 transition-all duration-300 flex items-center group">
+                                <i
+                                    class="fas fa-arrow-left text-xs ml-2 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300"></i>
+                                اخبار و رویدادها
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="text-gray-300 hover:text-cyan-300 transition-all duration-300 flex items-center group">
+                                <i
+                                    class="fas fa-arrow-left text-xs ml-2 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300"></i>
+                                سرمایه‌گذاری
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- ستون ۳: تماس با ما -->
+                <div>
+                    <h3 class="text-lg font-bold mb-6 relative inline-block">
+                        تماس با ما
+                        <div class="absolute -bottom-2 right-0 w-1/2 h-0.5 bg-cyan-400"></div>
+                    </h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <div
+                                class="w-8 h-8 bg-cyan-500/20 rounded-lg flex items-center justify-center ml-3 flex-shrink-0">
+                                <i class="fas fa-map-marker-alt text-cyan-300 text-sm"></i>
+                            </div>
+                            <div>
+                                <span class="text-gray-300 text-sm">تهران، کیلومتر ۱۵ جاده قدیم کرج، شهرک صنعتی شمس
+                                    آباد</span>
+                            </div>
+                        </li>
+                        <li class="flex items-center">
+                            <div
+                                class="w-8 h-8 bg-cyan-500/20 rounded-lg flex items-center justify-center ml-3 flex-shrink-0">
+                                <i class="fas fa-phone text-cyan-300 text-sm"></i>
+                            </div>
+                            <span class="text-gray-300">۰۲۱-۵۴۳۲۱۰۰۰</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div
+                                class="w-8 h-8 bg-cyan-500/20 rounded-lg flex items-center justify-center ml-3 flex-shrink-0">
+                                <i class="fas fa-envelope text-cyan-300 text-sm"></i>
+                            </div>
+                            <span class="text-gray-300">info@shamsabad-industrial.ir</span>
+                        </li>
+                    </ul>
+
+                    <!-- شبکه‌های اجتماعی -->
+                    <div class="mt-6">
+                        <h4 class="text-sm font-bold mb-3 text-gray-300">ما را دنبال کنید</h4>
+                        <div class="flex space-x-3 space-x-reverse">
+                            <a href="#"
+                                class="w-10 h-10 rounded-xl bg-gray-700 flex items-center justify-center hover:bg-cyan-500 transition-all duration-300 hover:scale-110 shadow-lg">
+                                <i class="fab fa-instagram text-white"></i>
+                            </a>
+                            <a href="#"
+                                class="w-10 h-10 rounded-xl bg-gray-700 flex items-center justify-center hover:bg-blue-500 transition-all duration-300 hover:scale-110 shadow-lg">
+                                <i class="fab fa-telegram text-white"></i>
+                            </a>
+                            <a href="#"
+                                class="w-10 h-10 rounded-xl bg-gray-700 flex items-center justify-center hover:bg-blue-400 transition-all duration-300 hover:scale-110 shadow-lg">
+                                <i class="fab fa-twitter text-white"></i>
+                            </a>
+                            <a href="#"
+                                class="w-10 h-10 rounded-xl bg-gray-700 flex items-center justify-center hover:bg-blue-700 transition-all duration-300 hover:scale-110 shadow-lg">
+                                <i class="fab fa-linkedin text-white"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- خط جداکننده -->
+            <div class="border-t border-gray-700 mt-8 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="text-gray-400 text-sm mb-4 md:mb-0">
+                        <p>© ۱۴۰۲ شهرک صنعتی شمس آباد. تمام حقوق محفوظ است.</p>
+                    </div>
+                    <div class="flex space-x-6 space-x-reverse text-sm text-gray-400">
+                        <a href="#" class="hover:text-cyan-300 transition-colors duration-300">حریم خصوصی</a>
+                        <a href="#" class="hover:text-cyan-300 transition-colors duration-300">قوانین و مقررات</a>
+                        <a href="#" class="hover:text-cyan-300 transition-colors duration-300">نقشه سایت</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+
+
+
+        // اسکریپت برای منوی موبایل
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // اسکریپت برای آکاردئون واحدهای صنعتی
+        document.getElementById('units-accordion').addEventListener('click', function () {
+            const content = document.getElementById('units-content');
+            const arrow = document.getElementById('units-arrow');
+
+            content.classList.toggle('hidden');
+            arrow.classList.toggle('rotate-180');
+        });
+
+
+        // راه‌اندازی GSAP و ScrollTrigger
+        gsap.registerPlugin(ScrollTrigger);
+
+        // انیمیشن‌های اسکرول
+        document.addEventListener('DOMContentLoaded', function () {
+            // انیمیشن برای المنت‌های fade-in
+            gsap.utils.toArray('.fade-in').forEach(element => {
+                gsap.fromTo(element,
+                    { opacity: 0, y: 50 },
+                    {
+                        opacity: 1,
+                        y: 0,
+                        duration: 1,
+                        scrollTrigger: {
+                            trigger: element,
+                            start: "top 80%",
+                            end: "bottom 20%",
+                            toggleActions: "play none none reverse"
+                        }
+                    }
+                );
+            });
+
+            // انیمیشن برای المنت‌های scale-in
+            gsap.utils.toArray('.scale-in').forEach(element => {
+                gsap.fromTo(element,
+                    { opacity: 0, scale: 0.8 },
+                    {
+                        opacity: 1,
+                        scale: 1,
+                        duration: 1,
+                        scrollTrigger: {
+                            trigger: element,
+                            start: "top 80%",
+                            end: "bottom 20%",
+                            toggleActions: "play none none reverse"
+                        }
+                    }
+                );
+            });
+
+            // انیمیشن برای کارت‌های درباره ما
+            gsap.utils.toArray('.about__card').forEach((card, index) => {
+                gsap.fromTo(card,
+                    { opacity: 0, y: 30 },
+                    {
+                        opacity: 1,
+                        y: 0,
+                        duration: 0.8,
+                        delay: index * 0.2,
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 85%",
+                            end: "bottom 20%",
+                            toggleActions: "play none none reverse"
+                        }
+                    }
+                );
+            });
+
+            // انیمیشن برای آیتم‌های شهرک صنعتی
+            gsap.utils.toArray('.industrial-park-item').forEach((item, index) => {
+                gsap.fromTo(item,
+                    { opacity: 0, y: 30 },
+                    {
+                        opacity: 1,
+                        y: 0,
+                        duration: 0.8,
+                        delay: index * 0.1,
+                        scrollTrigger: {
+                            trigger: item,
+                            start: "top 85%",
+                            end: "bottom 20%",
+                            toggleActions: "play none none reverse"
+                        }
+                    }
+                );
+            });
+
+            // انیمیشن برای آیتم‌های شمارنده
+            gsap.utils.toArray('.counter_item').forEach((item, index) => {
+                gsap.fromTo(item,
+                    { opacity: 0, y: 30 },
+                    {
+                        opacity: 1,
+                        y: 0,
+                        duration: 0.8,
+                        delay: index * 0.2,
+                        scrollTrigger: {
+                            trigger: item,
+                            start: "top 85%",
+                            end: "bottom 20%",
+                            toggleActions: "play none none reverse"
+                        }
+                    }
+                );
+            });
+
+            // انیمیشن شمارنده‌ها
+            gsap.utils.toArray('.count_one').forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-count'));
+                let count = 0;
+
+                ScrollTrigger.create({
+                    trigger: counter,
+                    start: "top 80%",
+                    onEnter: () => {
+                        const duration = 2;
+                        const increment = target / (duration * 60);
+
+                        const timer = setInterval(() => {
+                            count += increment;
+                            if (count >= target) {
+                                count = target;
+                                clearInterval(timer);
+                            }
+                            counter.textContent = Math.floor(count).toLocaleString('fa-IR');
+                        }, 1000 / 60);
+                    },
+                    once: true
+                });
+            });
+
+            // اسلایدر محصولات
+            const slider = document.querySelector('.slider-track');
+            const slides = document.querySelectorAll('.slide');
+            const dots = document.querySelectorAll('.slider-dot');
+            const prevBtn = document.querySelector('.prev-btn');
+            const nextBtn = document.querySelector('.next-btn');
+
+            let currentSlide = 0;
+
+            function updateSlider() {
+                slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+                dots.forEach((dot, index) => {
+                    if (index === currentSlide) {
+                        dot.classList.add('active');
+                        dot.classList.remove('bg-white/50');
+                        dot.classList.add('bg-white');
+                    } else {
+                        dot.classList.remove('active');
+                        dot.classList.add('bg-white/50');
+                        dot.classList.remove('bg-white');
+                    }
+                });
+            }
+
+            nextBtn.addEventListener('click', () => {
+                currentSlide = (currentSlide + 1) % slides.length;
+                updateSlider();
+            });
+
+            prevBtn.addEventListener('click', () => {
+                currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+                updateSlider();
+            });
+
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    currentSlide = index;
+                    updateSlider();
+                });
+            });
+
+            // اتو اسلاید
+            setInterval(() => {
+                currentSlide = (currentSlide + 1) % slides.length;
+                updateSlider();
+            }, 5000);
+        });
+    </script>
+</body>
+
+</html>
