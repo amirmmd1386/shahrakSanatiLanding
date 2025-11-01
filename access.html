@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>امکانات و دسترسی‌ها - شهرک صنعتی شمس‌آباد</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .glass { background: rgba(255,255,255,0.85); backdrop-filter: blur(6px); }
+    .category-card { transition: all 0.3s ease; }
+    .category-card:hover { transform: translateY(-5px); }
+    .address-text { line-height: 1.8; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased font-sans">
+
+  <!-- هدر اصلی -->
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-between p-5">
+      <div class="flex items-center space-x-3">
+        <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
+          <i class="fas fa-industry text-white text-xl"></i>
+        </div>
+        <h1 class="text-xl font-bold text-gray-800">
+          شهرک صنعتی شمس‌آباد
+        </h1>
+      </div>
+      <nav class="hidden md:flex space-x-8 space-x-reverse">
+        <a href="#" class="hover:text-blue-600 transition flex items-center gap-2 text-gray-700 font-medium">
+          <i class="fas fa-home text-sm"></i>
+          خانه
+        </a>
+        <a href="#" class="hover:text-blue-600 transition flex items-center gap-2 text-gray-700 font-medium">
+          <i class="fas fa-building text-sm"></i>
+          شرکت‌ها
+        </a>
+        <a href="#" class="hover:text-blue-600 transition flex items-center gap-2 text-gray-700 font-medium">
+          <i class="fas fa-map-marked-alt text-sm"></i>
+          امکانات شهرک
+        </a>
+        <a href="#" class="hover:text-blue-600 transition flex items-center gap-2 text-gray-700 font-medium">
+          <i class="fas fa-phone text-sm"></i>
+          تماس
+        </a>
+      </nav>
+      <button class="md:hidden text-gray-700">
+        <i class="fas fa-bars text-xl"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- هدر داخلی -->
+  <div class="bg-gradient-to-l from-blue-800 to-blue-600 text-white py-16">
+    <div class="max-w-7xl mx-auto px-5">
+      <div class="flex flex-col items-center text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">امکانات و دسترسی‌های شهرک صنعتی</h2>
+        <p class="text-xl text-blue-100 mb-6">کلیه خدمات و امکانات رفاهی در دسترس واحدهای صنعتی</p>
+        <nav class="flex items-center space-x-3 text-base">
+          <a href="/" class="hover:text-blue-200 transition flex items-center gap-2">
+            <i class="fas fa-home"></i>
+            صفحه نخست
+          </a>
+          <span class="text-gray-300">/</span>
+          <span class="text-blue-200 font-medium">امکانات شهرک</span>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <main class="max-w-7xl mx-auto px-5 py-10">
+    
+    <!-- دسته‌بندی‌های اصلی -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+      
+      <!-- خدمات بانکی -->
+      <div class="category-card glass rounded-2xl p-6 border border-slate-200 shadow-sm bg-white">
+        <div class="flex items-center gap-4 mb-4">
+          <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center">
+            <i class="fas fa-university text-green-600 text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800">خدمات بانکی</h3>
+        </div>
+        <p class="text-slate-600 mb-4">شعب بانک‌ها و دستگاه‌های خودپرداز در شهرک</p>
+        <div class="space-y-4">
+          <div class="p-4 bg-slate-50 rounded-lg">
+            <div class="flex items-start justify-between mb-3">
+              <span class="font-semibold text-slate-800">بانک ملی شعبه مرکزی</span>
+              <a href="https://maps.google.com/?q=35.352892,51.232075" target="_blank" class="text-blue-600 hover:text-blue-700 text-sm flex items-center gap-1">
+                <i class="fas fa-map-marker-alt"></i>
+                نقشه
+              </a>
+            </div>
+            <p class="text-slate-700 text-sm address-text">بلوار اصلی شهرک صنعتی شمس‌آباد، نبش خیابان صنعت، پلاک ۱۲۵</p>
+          </div>
+          <div class="p-4 bg-slate-50 rounded-lg">
+            <div class="flex items-start justify-between mb-3">
+              <span class="font-semibold text-slate-800">بانک ملت شعبه صنعتی</span>
+              <a href="https://maps.google.com/?q=35.353892,51.233075" target="_blank" class="text-blue-600 hover:text-blue-700 text-sm flex items-center gap-1">
+                <i class="fas fa-map-marker-alt"></i>
+                نقشه
+              </a>
+            </div>
+            <p class="text-slate-700 text-sm address-text">میدان مرکزی شهرک، جنب سالن همایش‌ها، ساختمان اداری شماره ۳، طبقه همکف</p>
+          </div>
+          <div class="p-4 bg-slate-50 rounded-lg">
+            <div class="flex items-start justify-between mb-3">
+              <span class="font-semibold text-slate-800">بانک صادرات شعبه شمس‌آباد</span>
+              <a href="https://maps.google.com/?q=35.351892,51.231075" target="_blank" class="text-blue-600 hover:text-blue-700 text-sm flex items-center gap-1">
+                <i class="fas fa-map-marker-alt"></i>
+                نقشه
+              </a>
+            </div>
+            <p class="text-slate-700 text-sm address-text">خیابان صنعت، بین خیابان فناوری و بلوار پژوهش، مجتمع تجاری پاسارگاد، واحد ۲۰۳</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- مراکز خرید -->
+      <div class="category-card glass rounded-2xl p-6 border border-slate-200 shadow-sm bg-white">
+        <div class="flex items-center gap-4 mb-4">
+          <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center">
+            <i class="fas fa-shopping-cart text-blue-600 text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800">مراکز خرید</h3>
+        </div>
+        <p class="text-slate-600 mb-4">فروشگاه‌ها و سوپرمارکت‌های شهرک</p>
+        <div class="space-y-4">
+          <div class="p-4 bg-slate-50 rounded-lg">
+            <div class="flex items-start justify-between mb-3">
+              <span class="font-semibold text-slate-800">سوپرمارکت رفاه ۲۴ ساعته</span>
+              <a href="https://maps.google.com/?q=35.354892,51.234075" target="_blank" class="text-blue-600 hover:text-blue-700 text-sm flex items-center gap-1">
+                <i class="fas fa-map-marker-alt"></i>
+                نقشه
+              </a>
+            </div>
+            <p class="text-slate-700 text-sm address-text">بلوار اصلی شهرک صنعتی، روبروی درب اصلی پارکینگ عمومی، پلاک ۸۷</p>
+          </div>
+          <div class="p-4 bg-slate-50 rounded-lg">
+            <div class="flex items-start justify-between mb-3">
+              <span class="font-semibold text-slate-800">هایپر مارکت صنعتی</span>
+              <a href="https://maps.google.com/?q=35.355892,51.235075" target="_blank" class="text-blue-600 hover:text-blue-700 text-sm flex items-center gap-1">
+                <i class="fas fa-map-marker-alt"></i>
+                نقشه
+              </a>
+            </div>
+            <p class="text-slate-700 text-sm address-text">میدان مرکزی شهرک، مجتمع تجاری الماس، طبقه اول، واحد‌های ۱۰۱ تا ۱۲۰</p>
+          </div>
+          <div class="p-4 bg-slate-50 rounded-lg">
+            <div class="flex items-start justify-between mb-3">
+              <span class="font-semibold text-slate-800">نانوایی صنعتی سنتی</span>
+              <a href="https://maps.google.com/?q=35.356892,51.236075" target="_blank" class="text-blue-600 hover:text-blue-700 text-sm flex items-center gap-1">
+                <i class="fas fa-map-marker-alt"></i>
+                نقشه
+              </a>
+            </div>
+            <p class="text-slate-700 text-sm address-text">خیابان فرهنگ، نبش کوچه بهداشت، پلاک ۴۵، نانوایی صنعتی شمس‌آباد</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- خدمات درمانی -->
+      <div class="category-card glass rounded-2xl p-6 border border-slate-200 shadow-sm bg-white">
+        <div class="flex items-center gap-4 mb-4">
+          <div class="w-16 h-16 bg-red-100 rounded-2xl flex items-center justify-center">
+            <i class="fas fa-hospital text-red-600 text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800">خدمات درمانی</h3>
+        </div>
+        <p class="text-slate-600 mb-4">مراکز بهداشتی و درمانی شهرک</p>
+        <div class="space-y-4">
+          <div class="p-4 bg-slate-50 rounded-lg">
+            <div class="flex items-start justify-between mb-3">
+              <span class="font-semibold text-slate-800">درمانگاه تخصصی صنعتی</span>
+              <a href="https://maps.google.com/?q=35.357892,51.237075" target="_blank" class="text-blue-600 hover:text-blue-700 text-sm flex items-center gap-1">
+                <i class="fas fa-map-marker-alt"></i>
+                نقشه
+              </a>
+            </div>
+            <p class="text-slate-700 text-sm address-text">بلوار سلامت، جنب پارک علم و فناوری، ساختمان درمانگاه تخصصی شهرک صنعتی</p>
+          </div>
+          <div class="p-4 bg-slate-50 rounded-lg">
+            <div class="flex items-start justify-between mb-3">
+              <span class="font-semibold text-slate-800">داروخانه شبانه‌روزی هلال احمر</span>
+              <a href="https://maps.google.com/?q=35.358892,51.238075" target="_blank" class="text-blue-600 hover:text-blue-700 text-sm flex items-center gap-1">
+                <i class="fas fa-map-marker-alt"></i>
+                نقشه
+              </a>
+            </div>
+            <p class="text-slate-700 text-sm address-text">میدان مرکزی شهرک، مجتمع خدمات پزشکی، طبقه همکف، واحد ۱۵</p>
+          </div>
+          <div class="p-4 bg-slate-50 rounded-lg">
+            <div class="flex items-start justify-between mb-3">
+              <span class="font-semibold text-slate-800">کلینیک دندانپزشکی صنعت</span>
+              <a href="https://maps.google.com/?q=35.359892,51.239075" target="_blank" class="text-blue-600 hover:text-blue-700 text-sm flex items-center gap-1">
+                <i class="fas fa-map-marker-alt"></i>
+                نقشه
+              </a>
+            </div>
+            <p class="text-slate-700 text-sm address-text">خیابان صنعت، بین بلوار اصلی و خیابان فناوری، ساختمان پزشکان، طبقه دوم</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- رستوران و کافه -->
+      <div class="category-card glass rounded-2xl p-6 border border-slate-200 shadow-sm bg-white">
+        <div class="flex items-center gap-4 mb-4">
+          <div class="w-16 h-16 bg-amber-100 rounded-2xl flex items-center justify-center">
+            <i class="fas fa-utensils text-amber-600 text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800">رستوران و کافه</h3>
+        </div>
+        <p class="text-slate-600 mb-4">مراکز پذیرایی و غذاخوری</p>
+        <div class="space-y-4">
+          <div class="p-4 bg-slate-50 rounded-lg">
+            <div class="flex items-start justify-between mb-3">
+              <span class="font-semibold text-slate-800">رستوران صنعتی شمس</span>
+              <a href="https://maps.google.com/?q=35.360892,51.240075" target="_blank" class="text-blue-600 hover:text-blue-700 text-sm flex items-center gap-1">
+                <i class="fas fa-map-marker-alt"></i>
+                نقشه
+              </a>
+            </div>
+            <p class="text-slate-700 text-sm address-text">بلوار اصلی شهرک صنعتی شمس‌آباد، جنب ساختمان مدیریت شهرک، طبقه دوم</p>
+          </div>
+          <div class="p-4 bg-slate-50 rounded-lg">
+            <div class="flex items-start justify-between mb-3">
+              <span class="font-semibold text-slate-800">کافه سنتی نگین</span>
+              <a href="https://maps.google.com/?q=35.361892,51.241075" target="_blank" class="text-blue-600 hover:text-blue-700 text-sm flex items-center gap-1">
+                <i class="fas fa-map-marker-alt"></i>
+                نقشه
+              </a>
+            </div>
+            <p class="text-slate-700 text-sm address-text">میدان مرکزی شهرک، مجتمع تجاری الماس، طبقه منفی یک، واحد ۵</p>
+          </div>
+          <div class="p-4 bg-slate-50 rounded-lg">
+            <div class="flex items-start justify-between mb-3">
+              <span class="font-semibold text-slate-800">سلف سرویس کارگری</span>
+              <a href="https://maps.google.com/?q=35.362892,51.242075" target="_blank" class="text-blue-600 hover:text-blue-700 text-sm flex items-center gap-1">
+                <i class="fas fa-map-marker-alt"></i>
+                نقشه
+              </a>
+            </div>
+            <p class="text-slate-700 text-sm address-text">خیابان صنعت، جنب کارخانه تولیدی کاشی و سرامیک، سالن غذاخوری کارگران</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- حمل و نقل -->
+      <div class="category-card glass rounded-2xl p-6 border border-slate-200 shadow-sm bg-white">
+        <div class="flex items-center gap-4 mb-4">
+          <div class="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center">
+            <i class="fas fa-bus text-purple-600 text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800">حمل و نقل</h3>
+        </div>
+        <p class="text-slate-600 mb-4">خدمات حمل و نقل و پارکینگ</p>
+        <div class="space-y-4">
+          <div class="p-4 bg-slate-50 rounded-lg">
+            <div class="flex items-start justify-between mb-3">
+              <span class="font-semibold text-slate-800">ایستگاه تاکسی‌رانی اصلی</span>
+              <a href="https://maps.google.com/?q=35.363892,51.243075" target="_blank" class="text-blue-600 hover:text-blue-700 text-sm flex items-center gap-1">
+                <i class="fas fa-map-marker-alt"></i>
+                نقشه
+              </a>
+            </div>
+            <p class="text-slate-700 text-sm address-text">ورودی اصلی شهرک صنعتی شمس‌آباد، جنب گیت ورودی، پایانه تاکسی‌رانی</p>
+          </div>
+          <div class="p-4 bg-slate-50 rounded-lg">
+            <div class="flex items-start justify-between mb-3">
+              <span class="font-semibold text-slate-800">پارکینگ عمومی طبقاتی</span>
+              <a href="https://maps.google.com/?q=35.364892,51.244075" target="_blank" class="text-blue-600 hover:text-blue-700 text-sm flex items-center gap-1">
+                <i class="fas fa-map-marker-alt"></i>
+                نقشه
+              </a>
+            </div>
+            <p class="text-slate-700 text-sm address-text">میدان مرکزی شهرک، جنب مجتمع تجاری الماس، پارکینگ عمومی طبقاتی شمس‌آباد</p>
+          </div>
+          <div class="p-4 bg-slate-50 rounded-lg">
+            <div class="flex items-start justify-between mb-3">
+              <span class="font-semibold text-slate-800">شرکت حمل و نقل بار و مسافر</span>
+              <a href="https://maps.google.com/?q=35.365892,51.245075" target="_blank" class="text-blue-600 hover:text-blue-700 text-sm flex items-center gap-1">
+                <i class="fas fa-map-marker-alt"></i>
+                نقشه
+              </a>
+            </div>
+            <p class="text-slate-700 text-sm address-text">بلوار صنعت، بین خیابان فناوری و بلوار پژوهش، پایانه حمل و نقل بار</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- خدمات اداری -->
+      <div class="category-card glass rounded-2xl p-6 border border-slate-200 shadow-sm bg-white">
+        <div class="flex items-center gap-4 mb-4">
+          <div class="w-16 h-16 bg-indigo-100 rounded-2xl flex items-center justify-center">
+            <i class="fas fa-file-contract text-indigo-600 text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800">خدمات اداری</h3>
+        </div>
+        <p class="text-slate-600 mb-4">دفاتر خدمات اداری و پستی</p>
+        <div class="space-y-4">
+          <div class="p-4 bg-slate-50 rounded-lg">
+            <div class="flex items-start justify-between mb-3">
+              <span class="font-semibold text-slate-800">اداره پست شهرک صنعتی</span>
+              <a href="https://maps.google.com/?q=35.366892,51.246075" target="_blank" class="text-blue-600 hover:text-blue-700 text-sm flex items-center gap-1">
+                <i class="fas fa-map-marker-alt"></i>
+                نقشه
+              </a>
+            </div>
+            <p class="text-slate-700 text-sm address-text">بلوار اصلی شهرک صنعتی شمس‌آباد، جنب ساختمان مدیریت، اداره پست منطقه</p>
+          </div>
+          <div class="p-4 bg-slate-50 rounded-lg">
+            <div class="flex items-start justify-between mb-3">
+              <span class="font-semibold text-slate-800">دفتر اسناد رسمی شماره ۱۴۵</span>
+              <a href="https://maps.google.com/?q=35.367892,51.247075" target="_blank" class="text-blue-600 hover:text-blue-700 text-sm flex items-center gap-1">
+                <i class="fas fa-map-marker-alt"></i>
+                نقشه
+              </a>
+            </div>
+            <p class="text-slate-700 text-sm address-text">میدان مرکزی شهرک، مجتمع خدمات اداری، طبقه سوم، واحد ۳۰۱</p>
+          </div>
+          <div class="p-4 bg-slate-50 rounded-lg">
+            <div class="flex items-start justify-between mb-3">
+              <span class="font-semibold text-slate-800">مرکز خدمات صنعتی و معدنی</span>
+              <a href="https://maps.google.com/?q=35.368892,51.248075" target="_blank" class="text-blue-600 hover:text-blue-700 text-sm flex items-center gap-1">
+                <i class="fas fa-map-marker-alt"></i>
+                نقشه
+              </a>
+            </div>
+            <p class="text-slate-700 text-sm address-text">خیابان صنعت، ساختمان مرکزی خدمات صنعتی، طبقات اول و دوم</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- نقشه شهرک -->
+    <div class="glass rounded-2xl p-7 border border-slate-200 shadow-sm bg-white mb-12">
+      <h3 class="text-xl font-semibold mb-6 text-gray-800">نقشه شهرک صنعتی شمس‌آباد</h3>
+      <div class="bg-slate-100 rounded-xl p-6 mb-6">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+          <div class="p-4 bg-green-100 rounded-lg border border-green-200">
+            <i class="fas fa-university text-green-600 text-2xl mb-3"></i>
+            <div class="font-semibold text-slate-800">بانک‌ها</div>
+            <div class="text-sm text-slate-600 mt-1">۳ شعبه فعال</div>
+          </div>
+          <div class="p-4 bg-blue-100 rounded-lg border border-blue-200">
+            <i class="fas fa-shopping-cart text-blue-600 text-2xl mb-3"></i>
+            <div class="font-semibold text-slate-800">فروشگاه‌ها</div>
+            <div class="text-sm text-slate-600 mt-1">۵ مرکز خرید</div>
+          </div>
+          <div class="p-4 bg-red-100 rounded-lg border border-red-200">
+            <i class="fas fa-hospital text-red-600 text-2xl mb-3"></i>
+            <div class="font-semibold text-slate-800">درمانی</div>
+            <div class="text-sm text-slate-600 mt-1">۴ مرکز درمانی</div>
+          </div>
+          <div class="p-4 bg-amber-100 rounded-lg border border-amber-200">
+            <i class="fas fa-utensils text-amber-600 text-2xl mb-3"></i>
+            <div class="font-semibold text-slate-800">رستوران</div>
+            <div class="text-sm text-slate-600 mt-1">۶ مرکز پذیرایی</div>
+          </div>
+        </div>
+      </div>
+      <div class="w-full h-96 rounded-xl overflow-hidden border border-slate-300 shadow-sm">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.715434233234!2d51.23207547588701!3d35.35289257239635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzXCsDIxJzEwLjQiTiA1McKwMTMnNTQuNiJF!5e0!3m2!1sen!2s!4v1234567890"
+          class="w-full h-full border-0"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="نقشه شهرک صنعتی شمس‌آباد">
+        </iframe>
+      </div>
+      <div class="mt-4 text-center">
+        <a href="https://www.google.com/maps/place/35.352892,51.232075" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition font-medium">
+          <i class="fas fa-external-link-alt"></i>
+          باز کردن نقشه در Google Maps
+        </a>
+      </div>
+    </div>
+
+    <!-- اطلاعات تماس -->
+    <div class="glass rounded-2xl p-7 border border-slate-200 shadow-sm bg-white">
+      <h3 class="text-xl font-semibold mb-6 text-gray-800">اطلاعات تماس مدیریت شهرک</h3>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="text-center p-5 bg-blue-50 rounded-xl border border-blue-100">
+          <i class="fas fa-phone text-blue-600 text-2xl mb-3"></i>
+          <h4 class="font-semibold text-gray-800 mb-2">تلفن تماس</h4>
+          <p class="text-slate-700">۰۲۱-۷۷۱۲۳۴۵۶</p>
+          <p class="text-slate-700">۰۲۱-۷۷۱۲۳۴۵۷</p>
+        </div>
+        <div class="text-center p-5 bg-blue-50 rounded-xl border border-blue-100">
+          <i class="fas fa-envelope text-blue-600 text-2xl mb-3"></i>
+          <h4 class="font-semibold text-gray-800 mb-2">ایمیل</h4>
+          <p class="text-slate-700">info@shamsabad.ir</p>
+          <p class="text-slate-700">support@shamsabad.ir</p>
+        </div>
+        <div class="text-center p-5 bg-blue-50 rounded-xl border border-blue-100">
+          <i class="fas fa-map-marker-alt text-blue-600 text-2xl mb-3"></i>
+          <h4 class="font-semibold text-gray-800 mb-2">آدرس مدیریت</h4>
+          <p class="text-slate-700 text-sm address-text">شهرک صنعتی شمس‌آباد، بلوار اصلی، ساختمان مدیریت مرکزی، طبقه سوم</p>
+        </div>
+        <div class="text-center p-5 bg-blue-50 rounded-xl border border-blue-100">
+          <i class="fas fa-clock text-blue-600 text-2xl mb-3"></i>
+          <h4 class="font-semibold text-gray-800 mb-2">ساعات کاری</h4>
+          <p class="text-slate-700">شنبه تا چهارشنبه</p>
+          <p class="text-slate-700">۸:۰۰ الی ۱۶:۰۰</p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="bg-white border-t mt-12">
+    <div class="max-w-7xl mx-auto px-5 py-8 text-base text-slate-600 flex flex-col md:flex-row gap-5 items-center justify-between">
+      <div>© تمامی حقوق برای شهرک صنعتی شمس‌آباد محفوظ است — ۱۴۰۳</div>
+      <div class="flex items-center gap-6">
+        <a href="#" class="text-slate-500 hover:text-slate-700 transition">قوانین</a>
+        <a href="#" class="text-slate-500 hover:text-slate-700 transition">حریم خصوصی</a>
+        <a href="tel:02177123456" class="text-sky-600 hover:text-sky-700 transition font-medium">۰۲۱-۷۷۱۲۳۴۵۶</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
